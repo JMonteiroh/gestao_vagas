@@ -15,7 +15,7 @@ public class JWTProvider {
     
     public String validateToken(String token) {
 
-        token = token.replace("Bearer","");
+        token = token.replace("Bearer","").trim();
 
         Algorithm algorithm = Algorithm.HMAC256(secretKey);
 
